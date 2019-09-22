@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 
 //styles
 import * as S from "./styles";
@@ -7,17 +7,14 @@ import background from "./assets/background.svg";
 // custom components
 
 // imports
+import Routes from "./config/routes";
 
 function App() {
-  const [something, setSomething] = useState('');
-
-  useEffect(() => {
-    // Similar to componentDidMount and componentDidUpdate
-  });
 
   return (
     <div className="App">
       <S.Background src={background} />
+      <Routes />
     </div>
   );
 }
