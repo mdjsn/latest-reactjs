@@ -1,24 +1,23 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from "react";
+
+//styles
+import * as S from "./styles";
+import background from "./assets/background.svg";
+
+// custom components
+
+// imports
 
 function App() {
+  const [something, setSomething] = useState('');
+
+  useEffect(() => {
+    // Similar to componentDidMount and componentDidUpdate
+  });
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <S.Background src={background} />
     </div>
   );
 }
